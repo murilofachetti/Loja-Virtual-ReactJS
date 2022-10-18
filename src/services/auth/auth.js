@@ -1,5 +1,7 @@
-const userIsLoggedIn = () => {
-    return true;
+function userIsLoggedIn(){
+    if (true){
+        window.location.href = '/login';
+    }
 }
 
 const login = (email, password) => {

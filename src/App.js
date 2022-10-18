@@ -4,10 +4,9 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  NavLink
  } from "react-router-dom";
 
-import { userIsLoggedIn } from './services/auth/auth';
+
 
 const Cart = lazy(() => import("./pages/cart/cart"));
 const Catalog = lazy(() => import("./pages/catalog/catalog"));
@@ -18,11 +17,8 @@ const Register = lazy(() => import("./pages/register/register"));
 const NotFound = lazy(() => import("./pages/not-found/not-found"));
 
 function App() {
-  useEffect(() => {
-    console.log("Abertura da Página");
-    console.log(userIsLoggedIn)
-
-    })
+   useEffect(() => {
+    }, []);
 
   return <Router>
     <Suspense fallback={'Carregando...'}>
