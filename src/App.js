@@ -4,8 +4,18 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
- } from "react-router-dom";
+  Link
+ } from 'react-router-dom';
 
+import {
+    AppBar,
+    Toolbar,
+    Typography,
+    IconButton,
+} from "@mui/material";
+
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 const Cart = lazy(() => import("./pages/cart/cart"));
@@ -20,8 +30,40 @@ function App() {
    useEffect(() => {
     }, []);
 
-  return <Router>
-    <Suspense fallback={'Carregando...'}>
+  return (
+  <Router>
+    <AppBar position={'static'}>
+      <Toolbar 
+        style={{
+          justifyContent: 'space-between',
+        }}>
+        <Typography 
+        variant="h6" 
+        compenent="h2"><Link to="/catalog">Loja Virtual</Link></Typography>
+        <div>
+        <IconButton  
+        edge="end">
+        <Link to="/cart">
+        <ShoppingCartIcon style={{
+            color: 'white'
+        }}/>
+        </Link>
+        </IconButton>
+        <IconButton
+        edge="end"
+        style={{
+          marginLeft: 16,
+        }}>
+        <Link to="/login">
+        <LogoutIcon style={{
+            color: 'white'
+        }}/>
+        </Link>
+        </IconButton>
+        </div>
+      </Toolbar>
+    </AppBar>
+    <Suspense fallback={"Carregando..."}>
       <Routes>
         <Route exact path="/" element={<Catalog/>}/>
         <Route exact path="/catalog" element={<Catalog/>}/>
@@ -33,7 +75,7 @@ function App() {
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </Suspense>
-  </Router>;
+  </Router>);
 }
 
 export default App;

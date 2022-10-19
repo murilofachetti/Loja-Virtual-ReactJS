@@ -11,7 +11,9 @@ import {
     Button,
     InputAdornment,
     OutlinedInput,
-    IconButton
+    IconButton,
+    FormControl,
+    InputLabel
 } from '@mui/material';
 import LoginIcon from '@mui/icons-material/Login';
 import Visibility from '@mui/icons-material/Visibility';
@@ -70,11 +72,13 @@ const Login = () => {
                     <Grid item xs={12} sx={{
                         marginBottom: '16px'
                     }}>
+                        <FormControl sx={{ width: '100%' }}>
+                        <InputLabel>Senha</InputLabel>
                         <OutlinedInput  
                         fullWidth
                         color="primary" 
                         label="Senha" 
-                        type={visibilityToggle ? 'text' : 'password'}
+                        type={visibilityToggle ? 'password' : 'text'}
                         endAdornment={<InputAdornment position="end">
                         
                         <IconButton
@@ -86,6 +90,7 @@ const Login = () => {
                         </IconButton>
                         </InputAdornment>} 
                         variant="outlined" />
+                        </FormControl>
                     </Grid>
                     <Grid item xs={12} sx={{
                         marginBottom: '16px'
