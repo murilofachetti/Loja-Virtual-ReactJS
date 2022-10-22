@@ -102,7 +102,9 @@ const Login = () => {
                     <Link style={{
                         textAlign: 'center',
                         display: 'block',
-                        width: '100%'
+                        width: '100%',
+                        color: '#1976d2',
+                        textDecoration: 'underline'
                     }} to="/register">Criar conta
                     </Link>
                     </Grid>

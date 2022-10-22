@@ -126,7 +126,9 @@ const Register = () => {
                     <Link style={{
                         textAlign: 'center',
                         display: 'block',
-                        width: '100%'
+                        width: '100%',
+                        color: '#1976d2',
+                        textDecoration: 'underline'
                     }} to="/login">Entrar
                     </Link>
                     </Grid>

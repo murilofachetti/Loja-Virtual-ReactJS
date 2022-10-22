@@ -29,7 +29,7 @@ const Catalog = () => {
                         padding: '10px',
                         borderRadius: '0 0 0 16px'
                     }}>10%</span>
-                    <img style={{width: '100%'}} src={products[id].image}/>
+                    <img style={{width: '100%'}} src={products[id].images[0]}/>
                         {
                             products[id].categories.map(categoryId => {
                                 return <span className='category-label'>{categories[categoryId].name}</span>
@@ -42,6 +42,24 @@ const Catalog = () => {
                         marginTop: '16px',
                         marginBottom: '8px'
                     }}>{products[id].name}</Typography>
+
+                    {
+                        products[id].promo_price ? <Typography variant="p" component="p" style={{
+                            float: 'left',
+                            fontSize: '20px',
+                            marginRight: '8px'
+                        }} className="promo_price">{products[id].promo_price.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}
+                        </Typography> : ""
+                    }
+
+                    <Typography variant="p" component="p" className="price" style={{
+                        fontSize: products[id].promo_price ? '16px' : '20px',
+                        color: products[id].promo_price ? '#a9a9a9' : '#333333',
+                        textDecoration: products[id].promo_price ? 'line-through' : 'none', 
+                        float: 'left',
+                        marginBottom: '16px'
+                    }}>{products[id].price.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})}
+                    </Typography>
                     <Typography variant="p" component="p" style={{
                         float: 'left',
                         marginBottom: '16px',
