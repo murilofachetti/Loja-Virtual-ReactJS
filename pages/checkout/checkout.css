@@ -1,0 +1,11 @@
+.checkout {
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 1297px){
+    .checkout {
+        max-width: 1280px;
+        margin: 0 auto !important;
+    }
+}

@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(238, 238, 238);
+}
+
+.boxt {
+    padding: 20px !important;
+}
+
+.listTotal li{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.stackQuantity input {
+    width: 30px;
+}
+
+.stackQuantity input::-webkit-outer-spin-button,
+.stackQuantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=numeber] {
+    -moz-appearance: textfield;
+}
+
+.stackImage div{
+    width: 100px;
+    height: 130px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+
