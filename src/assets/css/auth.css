@@ -8,3 +8,10 @@ header {
     }
 }
 
+@media screen and (min-width: 1800px){
+    .imgconfig {
+        width: 100%;
+        height: 300px;
+    }
+}
+

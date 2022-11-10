@@ -1,6 +1,6 @@
 import '../../assets/css/auth.css';
-import cover from '../../assets/img/pet-login.jpg';
-import logo from '../../assets/img/logo.png';
+import cover from '../../assets/img/imglogo.jpg';
+import logo from '../../assets/img/logoprojetoterere.jpg';
 
 import { Link } from 'react-router-dom';
 
@@ -32,16 +32,14 @@ const Login = () => {
         height: '100vh'
     }}>
         <Grid className="leftSide" item sx={{
-                padding: '10px',
                 boxSizing: 'border-box'
             }} xs={0} md={7} lg={8}>
                 <Stack spacing={2} style={{
-                height: '100%',
+                width: '100%',
                 justifyContent: 'center',
-                alignItems: 'center'
             }}>
                 <img src={cover} style={{
-                    width: '100%'
+                    height: '100vh'
                 }} alt="Logo"/>
                 </Stack>
         </Grid>
@@ -55,11 +53,10 @@ const Login = () => {
                 boxSizing: 'border-box'
             }}>
                 <Stack style={{
-                    marginTop: '20px',
                     justifyContent: 'center',
                     alignItems: 'center'
                 }}><img src={logo} style={{
-                    width: '100px'
+                    width: '150px'
                 }} alt="Logo"/>
                  </Stack>
                 <h1>Entre com seu Usuário</h1>
@@ -96,7 +93,10 @@ const Login = () => {
                         marginBottom: '16px'
                     }}>
                         <Button fullWidth variant="contained" endIcon={<LoginIcon />} style={{
-                            marginTop: 5
+                            marginTop: 5,
+                            backgroundColor: '#2c9951',
+                            color: '#513a38',
+                            fontWeight: 'bold'
                         }}>Entrar</Button>
                     </Grid>
                     <Link style={{
@@ -104,7 +104,8 @@ const Login = () => {
                         display: 'block',
                         width: '100%',
                         color: '#1976d2',
-                        textDecoration: 'underline'
+                        textDecoration: 'underline',
+                        fontWeight: 'bold'
                     }} to="/register">Criar conta
                     </Link>
                     </Grid>

@@ -15,6 +15,7 @@ import "./product.css";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { Link } from "react-router-dom";
 
 const Product = () => {
     const params = useParams();
@@ -87,7 +88,12 @@ const Product = () => {
                 </IconButton>
             </div>
             <div className="productItem__buy">
-            <Button variant="contained" endIcon={<ShoppingCartIcon />} size="large">Comprar</Button>
+            <Link to="/cart">
+            <Button variant="contained" endIcon={<ShoppingCartIcon />} size="large" style={{
+                backgroundColor: '#2c9951',
+                fontWeight: 'bolder'
+                }}>Comprar</Button>
+            </Link>
             </div>
 
         </Grid>

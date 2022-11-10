@@ -1,4 +1,5 @@
 import './App.css';
+import iconlogo from './assets/img/logotopo.png';
 import { lazy, Suspense, useEffect } from 'react';
 import { 
   BrowserRouter as Router,
@@ -14,6 +15,8 @@ import {
     IconButton,
 } from "@mui/material";
 
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import LogoutIcon from '@mui/icons-material/Logout';
 
@@ -32,20 +35,66 @@ function App() {
 
   return (
   <Router>
-    <AppBar position={'static'}>
+    <AppBar position={'static'} style={{
+      backgroundColor: '#2c9951'
+    }}>
       <Toolbar 
         style={{
           justifyContent: 'space-between',
         }}>
+        <div>
         <Typography 
         variant="h6" 
-        compenent="h2"><Link to="/catalog">Loja Virtual</Link></Typography>
+        compenent="h2">
+        <Link to="/catalog">
+        <img src={iconlogo} alt="Logo" style={{
+          width: '30px',
+          marginTop: '9px',
+          marginLeft: '15px',
+          float: 'left'
+        }}/>
+          <span style={{
+            paddingLeft: '10px',
+            paddingTop: '13px',
+            float: 'left',
+            fontSize: 25,
+            fontFamily: 'LakkiReddy'
+          }}>Tereré Mania</span>
+        </Link>
+        </Typography>
+        </div>
         <div>
         <IconButton  
-        edge="end">
+        edge="end"
+        style={{
+          color: '#513a38',
+        }}>
+        <AccountCircleIcon style={{
+            paddingRight: '5px',
+            color: '#513a38',
+            paddingBottom: '9px'
+        }}/><span className="navesquerdo"> Minha Conta</span>
+        </IconButton> 
+        <IconButton  
+        edge="end"
+        style={{
+          marginLeft: 16,
+          color: '#513a38',
+        }}>
+        <FavoriteIcon style={{
+            color: '#513a38',
+            paddingRight: '5px',
+            paddingBottom: '9px'
+        }}/><span className="navesquerdo"> Favoritos</span>
+        </IconButton> 
+        <IconButton  
+        edge="end"
+        style={{
+          marginLeft: 16,
+        }}>
         <Link to="/cart">
         <ShoppingCartIcon style={{
-            color: 'white'
+            color: '#513a38'
         }}/>
         </Link>
         </IconButton>
@@ -56,7 +105,7 @@ function App() {
         }}>
         <Link to="/login">
         <LogoutIcon style={{
-            color: 'white'
+            color: '#513a38'
         }}/>
         </Link>
         </IconButton>

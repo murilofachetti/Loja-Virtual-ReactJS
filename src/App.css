@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Oswald-Bold";
+  src: url("./fonts/Oswald-Bold.ttf") ;
+}
+
+@font-face {
+  font-family: "LakkiReddy";
+  src: url("./fonts/LakkiReddy.ttf");
+}
+
 .App {
   text-align: center;
 }
@@ -38,12 +48,21 @@
 }
 
 a {
-  color: white;
+  font-family: 'Kreon';
+  color: #513a38;
   text-decoration: none;
+  font-weight: bolder;
+}
+
+.navesquerdo {
+  font-family: 'Oswald-Bold';
+  font-weight: bolder;
+  font-size: 20px;
+  padding-bottom: 9px;
 }
 
 .category-label {
-  background-color: #1976d2;
+  background-color: #513a38;
   box-sizing: border-box;
   padding: 2px 5px;
   color: #fff;
